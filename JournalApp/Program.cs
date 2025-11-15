@@ -113,3 +113,4 @@ namespace JournalApp
 // the date and time are now included in each journal entry for better tracking.
 // i added a micro setting so you can choose journals.
 // changed things up so you can write simple names for files without needing to type .txt every time.
+//testing push
