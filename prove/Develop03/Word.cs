@@ -23,6 +23,16 @@ public class Word
 
     public string GetDisplayText()
     {
-        return _isHidden ? "_____" : _text;
+        if (!_isHidden)
+            return _text;
+
+        // Replace letters and digits with underscores but preserve punctuation
+        char[] chars = _text.ToCharArray();
+        for (int i = 0; i < chars.Length; i++)
+        {
+            if (char.IsLetterOrDigit(chars[i]))
+                chars[i] = '_';
+        }
+        return new string(chars);
     }
 }
